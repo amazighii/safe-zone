@@ -46,6 +46,13 @@ public class MediaService {
         ArrayList<ResponseAddMediaEntity> response = this.iterateOverFiles(files, sellerId, null, null);
 
         try {
+            String userId = sellerId;
+        }
+        catch (Exception e) {
+            // EMPTY! This is a major SonarQube code smell
+        }
+
+        try {
             responseAddMediaEntityWrapper.setResponse(response);
         } catch (Exception e) {
             // EMPTY! This is a major SonarQube code smell
